@@ -129,7 +129,6 @@ jobs:
       ###########################
       - name: Build
         uses: ./
-        continue-on-error: true
         env:
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
@@ -152,4 +151,5 @@ jobs:
             'Build ${{ matrix.targetPlatform }} on Ubuntu (${{ matrix.unityVersion }}_il2cpp_${{ matrix.buildWithIl2cpp
             }}_params_${{ matrix.additionalParameters }})'
           path: build
+          if-no-files-found: error
           retention-days: 14
