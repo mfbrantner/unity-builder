@@ -1,4 +1,4 @@
-name: Builds - Ubuntu
+name: Builds - Ubuntu  (No retry steps)
 
 on:
   workflow_dispatch:
